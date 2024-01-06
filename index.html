@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section id="introduction">
+    <img src="plane.png" alt="" class="plane">
+    <div class="text-container">
+    <h1><span>Hi I am</span> Aung</h1>
+    <p>a student currently studying web development</p>
+    </div>
+    <div class="ground"></div>
+</section>
+
+
+<section id="skills">
+    <h1 class="skillText">What are my skills?</h1>
+    <div class="cards">
+    <div class="card firstCard">
+        <img src="coding.png" alt="computer image">
+        <p>My enthusiasm for coding is unparalled.</p>
+    </div>
+    <div class="card secondCard animate--delay-1sec">
+        <img src="think.png" alt="thinking image">
+        <p>Tackling problems from a critical standpoint makes problems scared of me.</p>
+    </div>
+    <div class="card thirdCard animate--delay-2sec">
+        <img src="creativity.png" alt="idea light-bulb">
+        <p>I'm looking to be creative at any opportunity I get.</p>
+    </div>
+
+    <div class="card fourthCard animate--delay-3sec">
+        <img src="steps.png" alt="steps image">
+        <p>Always being two steps ahead of others give me an advantage.</p>
+    </div>
+    </div>
+</section>
+
+
+<section id="contact">
+
+    <div class="right-container">
+        <div class="userInput">
+        <form action="mailto:aungmk712@gmail.com" class="emailForm">
+            <table>
+<thead>
+                <tr>
+                    <th colspan="2">
+                        <h3>Contact Us</h3>
+                    </th>
+                </tr>
+</thead>
+                <tbody>
+                <tr>
+                    <td>
+            <label for="firstName">First name</label>
+            <input id ="firstName" autocomplete="off" type="text" placeholder="e.g. Toji">
+                    </td>
+                <td>
+            <label for="lastName">Last name</label>
+            <input id = "lastName" autocomplete="off" type="text" placeholder="e.g. Fushiguro">
+                </td>
+                </tr>
+                <tr>
+                    <td>
+            <label for="emailAddress">Email address</label>
+            <input id = "emailAddress" autocomplete="off" type="email" placeholder="example@mail.com" size="30" >
+                    </td>
+                    <td>
+            <label for="phoneNumber">Phone number </label>
+            <input id="phoneNumber" autocomplete="off" type="text" placeholder="(+95)9445324545">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="messageSpan" rowspan="4">
+            <label for="messageBox">Message</label>
+            <textarea id="messageBox"  name="myTextarea" placeholder="Tell me about your next project" cols="35" rows="3" minlength="10" maxlength="500" required></textarea>
+                    </td>
+                </tr>
+                </tbody>
+
+                <tfoot>
+                <tr>
+                    <td>
+
+                    <button class="btn" type="submit">Submit
+                        <div class="arrowContainer">
+                        <div class="arrow"></div>
+                        <div class="arrowHead right"></div>
+                    </div>
+                    </button>
+
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+
+        </form>
+        </div>
+    </div>
+    <div class="leftContainer">
+        <h2>We'd love to hear from you.</h2>
+    </div>
+</section>
+
+
+<script src="index.js" type="application/javascript"></script>
+</body>
+</html>

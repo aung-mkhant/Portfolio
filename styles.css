@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat&family=Raleway&display=swap');
+
+:root {
+    /*colors*/
+    --beige: #EEE7DA;
+    --sage: #739072;
+    --green: #88AB8E;
+    --dark-green: #3A4D39;
+    --grey: #F2F1EB;
+
+    --hover-color: black;
+    --scroll:  0;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+}
+section {
+    width: 100vw;
+}
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+/*Introduction Section*/
+section#introduction {
+    height: 100vh;
+    background: var(--grey);
+    position: relative;
+    width: 100vw;
+    overflow-x: hidden;
+    z-index: -1;
+}
+.text-container {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+h1 {
+    font-size: 50px;
+}
+.text-container h1{
+    color: var(--green);
+}
+.text-container p{
+    font-size: 25px;
+    color: var(--dark-green);
+}
+.ground {
+    background-image: url("ground.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    aspect-ratio: 900/600;
+    background-size: cover;
+    bottom: 0;
+    width: 100%;
+}
+.plane {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 100%;
+    transition: transform 0.3s ease-out;
+    translate: 0 0;
+}
+
+/*Skills section*/
+@keyframes firstSlideInCards {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: rotate(-15deg) translate(20px, -25px) ;
+    }
+}
+@keyframes secondSlideInCards {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translate(0px, -30px);
+    }
+}
+@keyframes thirdSlideInCards {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: rotate(8deg) translate(0px, -20px) ;
+    }
+}
+@keyframes fourthSlideInCards {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: rotate(18deg) translate(0px, 0px);
+    }
+}
+section#skills {
+    text-align: center;
+    padding: 50px 0 50px;
+    background: var(--grey);
+}
+section#skills h1{
+    margin-top: 5.5rem;
+    color: var(--green);
+    width: 100vw;
+}
+
+.hidden {
+    opacity: 0;
+}
+.active {
+    opacity: 1;
+    animation-fill-mode: backwards;
+}
+.firstCard.active {
+    animation:firstSlideInCards  0.3s ease-out forwards;
+}
+.secondCard.active {
+    animation:secondSlideInCards  1s ease-out forwards;
+}
+.thirdCard.active {
+    animation: thirdSlideInCards 1.3s ease-out forwards;
+}
+.fourthCard.active {
+    animation: fourthSlideInCards 1.5s ease-out forwards;
+}
+.animate--delay-1sec {
+    animation-delay: 1s;
+}
+.animate--delay-2sec {
+    animation-delay: 2s;
+}
+.animate--delay-3sec {
+    animation-delay: 3s;
+}
+
+.cards {
+    font-size: 19px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+    margin-bottom: 6rem;
+}
+.card {
+    background-color: #f5f7f8;
+    background-image: url("https://www.transparenttextures.com/patterns/diamon  d-upholstery.png");
+    width: 250px;
+    height: 300px;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 49px 49px 49px 49px;
+    -webkit-border-radius: 49px 49px 49px 49px;
+    -moz-border-radius: 49px 49px 49px 49px;
+    box-shadow: -12px 3px 8px 0 rgba(0,0,0,0.39);
+    -webkit-box-shadow: -12px 3px 8px 0 rgba(0,0,0,0.39);
+    -moz-box-shadow: -12px 3px 8px 0 rgba(0,0,0,0.39);
+}
+.card img {
+    width: 43%;
+    margin-top: 30px;
+
+}
+.card p {
+    font-size: 19px;
+    margin-top: 40px;
+}
+.card.firstCard {
+    z-index: 0;
+    transform: rotate(-15deg) translate(20px, -25px) ;
+}
+.animate.card.firstCard.firstViewed {
+    z-index: 6;
+}
+.animate.card.secondCard.firstViewed {
+    z-index: 5;
+}
+.animate.card.thirdCard.firstViewed {
+    z-index: 4;
+}
+.card.secondCard {
+    z-index: 1;
+    margin-left: -200px;
+    transform: translate(0px, -30px) ;
+
+}
+.animate.card.secondCard.secondViewed {
+    z-index: 5;
+}
+.animate.card.thirdCard.secondViewed {
+    z-index: 4;
+}
+.card.thirdCard {
+    z-index: 2;
+    margin-left: -200px;
+    transform: rotate(8deg) translate(0px, -20px) ;
+}
+.animate.card.thirdCard:hover {
+    z-index: 4;
+}
+.card.fourthCard {
+    z-index: 3;
+    margin-left: -200px;
+    transform: rotate(18deg) translate(0px, 0px) ;
+}
+
+
+
+/*Contact Me Section*/
+section#contact {
+    position: relative;
+}
+#contact .leftContainer {
+    width: 40%;
+    height: 100vh;
+    background-color: #070504;
+    background-image: url("me.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#contact .right-container {
+    width: 60%;
+    position: absolute;
+    left: 40%;
+    top: 0;
+}
+#contact .leftContainer h2 {
+    color:white;
+    font-size: 3rem;
+    width: 70%;
+    position: relative;
+    left: 2rem;
+    top: 2rem;
+}
+.emailForm table{
+    margin: 50px auto;
+}
+.userInput h3 {
+    color: var(--dark-green);
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    text-align: left;
+}
+table {
+    border-spacing: 20px;
+}
+table input {
+    margin-top: 0.75rem;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ff6550;
+}
+table input:hover {
+    border-bottom: 2px solid black;
+}
+table input:focus, textarea:focus{
+    outline: none;
+}
+textarea:hover {
+    border-bottom: 2px solid black;
+}
+td.messageSpan {
+    width: 100%;
+}
+textarea {
+    margin-top: 0.75rem;
+    resize: none;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ff6550;
+}
+.btn {
+    width: auto;
+    border: none;
+    background: transparent;
+    color: #ff6550;
+}
+/* Fix hover method */
+.btn:hover,
+.btn:hover .arrow,
+.btn:hover .arrowHead
+{
+    color: black;
+    border-color: black;
+}
+.btn:focus {
+    outline: none;
+}
+form input, textarea {
+    display: block;
+}
+th,td {
+    padding: 10px;
+    width: 50%;
+}
+.arrowContainer {
+    position: relative;
+    margin-top: 4px;
+}
+.arrow {
+    position: absolute;
+    border-top: solid 2px #ff6550;
+    width: 3rem;
+    top:4px;
+    left: 0.75rem;
+}
+.arrowHead {
+    position: absolute;
+    top: 1px;
+    left: 3.25rem;
+    border: solid #ff6550;
+    border-width: 0 2.5px 2.5px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+
+/*Media Queries*/
+
+@media (max-width: 1080px) {
+    h1{
+        font-size: 45px;
+    }
+    .text-container p{
+        font-size: 23px;
+    }
+}
+
+
+@media (max-width: 772px) {
+    section#introduction {
+        height: 90vh;
+    }
+    .plane {
+        width: 150px;
+        height: 100px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .text-container p{
+        font-size: 20px;
+    }
+    .card {
+        width: 230px;
+        height: 280px;
+    }
+    .card img {
+        width: 40%;
+    }
+    .card p {
+        font-size: 17px;
+    }
+}
+
+
+
+
+@media (max-width: 618px) {
+    section#introduction {
+        height: 80vh;
+    }
+    .plane {
+        width: 100px;
+        height: 50px;
+    }
+    h1{
+        font-size: 34px;
+    }
+    .text-container p{
+        font-size: 16px;
+    }
+    .card {
+        width: 200px;
+        height: 250px;
+    }
+    .card img {
+        width: 40%;
+    }
+    .card p {
+        font-size: 15px;
+    }
+
+}
+
+
+
+/*This just handles form*/
+@media (max-width: 837px) {
+    #contact .leftContainer h2 {
+        position: static;
+        font-size: 2rem;
+        width: auto;
+    }
+    #contact .leftContainer {
+        bottom: 0;
+        width: auto;
+        height: auto;
+        background-position: center top ;
+        background-size: cover;
+        padding: 30px
+
+    }
+    #contact .right-container {
+        width: 100%;
+        position: static;
+    }
+}
