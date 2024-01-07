@@ -23,6 +23,7 @@ body {
 }
 section {
     width: 100vw;
+    overflow-x: hidden;
 }
 h1, h2, h3 {
     font-family: 'Merriweather', serif;
@@ -34,7 +35,6 @@ section#introduction {
     background: var(--grey);
     position: relative;
     width: 100vw;
-    overflow-x: hidden;
     z-index: -1;
 }
 .text-container {
