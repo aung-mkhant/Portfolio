@@ -52,7 +52,7 @@ h1 {
     position: fixed;
     left: 0;
     right: 0;
-    margin: 230px auto;
+    margin: 30vh auto;
 }
 .text-container p{
     font-size: 25px;
@@ -60,7 +60,7 @@ h1 {
     position: fixed;
     left: 0;
     right: 0;
-    margin: 300px auto;
+    margin: 40vh auto;
 }
 .ground {
     background-image: url("ground.svg");
@@ -345,11 +345,7 @@ th,td {
     h1{
         font-size: 45px;
     }
-    .text-container h1{
-        margin: 250px auto;
-    }
     .text-container p{
-        margin: 310px auto;
         font-size: 23px;
     }
 }
@@ -358,12 +354,6 @@ th,td {
 @media (max-width: 772px) {
     section#introduction {
         height: 90vh;
-    }
-    .text-container h1{
-        margin: 200px auto;
-    }
-    .text-container p{
-        margin: 250px auto;
     }
     .plane {
         width: 150px;
@@ -393,12 +383,6 @@ th,td {
 @media (max-width: 618px) {
     section#introduction {
         height: 80vh;
-    }
-    .text-container h1{
-        margin: 150px auto;
-    }
-    .text-container p{
-        margin: 190px auto;
     }
     .plane {
         width: 100px;
