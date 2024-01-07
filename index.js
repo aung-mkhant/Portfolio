@@ -66,11 +66,8 @@ document.addEventListener("scroll", setScroll);
 window.addEventListener("resize", setScroll);
 
 function setScroll() {
-    const textContainer = document.querySelector(".text-container");
     const htmlElement = document.documentElement;
     const percentScrolled =htmlElement.scrollTop / htmlElement.clientHeight;
-    const scrollPosition = window.scrollY;
-    textContainer.style.top = 30 + scrollPosition * 0.1 + "%";
     const scroll = Math.min(percentScrolled * 100,100);
     document.querySelector('.text-container').style.display = scroll > 90 ? `none` : `initial`;
     document.querySelector('.plane').style.translate = `${-scroll * 25}px  ${scroll * 7}px`;
