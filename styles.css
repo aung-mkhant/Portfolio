@@ -43,8 +43,7 @@ section#introduction {
     position: fixed;
     left:  0;
     right: 0;
-    top: 50%;
-    margin: auto auto;
+    margin: 0 auto;
 
     z-index: 0;
 }
