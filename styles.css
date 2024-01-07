@@ -38,14 +38,17 @@ section#introduction {
     z-index: -1;
 }
 .text-container {
-    width: 100%;
+    width: 80%;
     text-align: center;
     position: fixed;
+    left:  0;
+    right: 0;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto auto;
+
     z-index: 0;
 }
+
 h1 {
     font-size: 50px;
 }
