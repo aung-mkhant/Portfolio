@@ -59,7 +59,6 @@ cards.forEach((card,index) =>  {
 
 
 
-const plane = document.querySelector('.plane');
 
 
 document.addEventListener("scroll", setScroll);
@@ -70,7 +69,7 @@ function setScroll() {
     const percentScrolled =htmlElement.scrollTop / htmlElement.clientHeight;
     const scroll = Math.min(percentScrolled * 100,100);
     document.querySelector('.text-container').style.display = scroll > 90 ? `none` : `initial`;
-    document.querySelector('.plane').style.translate = `${-scroll * 25}px  ${scroll * 7}px`;
+
 }
 
 setScroll();
